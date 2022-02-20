@@ -128,8 +128,6 @@ img {
 }
 
 .link-contact-icon {
-  width: 16px;
-  height: 16px;
   margin-right: 10px;
   fill: var(--secondary-text-color);
 }
@@ -143,11 +141,6 @@ img {
   padding: 25px 100px;
   margin-bottom: 30px;
   background-color: var(--secondary-background-color);
-}
-
-.about-icon {
-  width: 70px;
-  height: 70px;
 }
 
 .section {
@@ -323,8 +316,6 @@ img {
 }
 
 .social-icon {
-  width: 20px;
-  height: 20px;
   fill: #afb1b8;
 }
 
@@ -365,8 +356,6 @@ img {
 }
 
 .companies-icon {
-  width: 106px;
-  height: 60px;
   fill: #afb1b8;
 }
 
@@ -466,8 +455,6 @@ img {
 }
 
 .footer-social-icon {
-  width: 20px;
-  height: 20px;
   fill: var(--white-color);
 }
 
@@ -503,6 +490,8 @@ img {
 .overbtn-item:focus {
   color: var(--white-color);
   background-color: var(--brand-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-work {
@@ -516,6 +505,13 @@ img {
 .work-card {
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.work-card-link:hover,
+.work-card-link:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .work-card-item {
