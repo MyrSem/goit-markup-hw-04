@@ -43,6 +43,11 @@ img {
   height: auto;
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -137,12 +142,6 @@ img {
   fill: var(--brand-color);
 }
 
-.about-item-icon {
-  padding: 25px 100px;
-  margin-bottom: 30px;
-  background-color: var(--secondary-background-color);
-}
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -168,7 +167,10 @@ img {
     url('../images/img-cover.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  max-width: 1600рх;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: contain;
 }
 
 .main-title {
@@ -205,6 +207,15 @@ img {
 }
 
 /* About  */
+.about-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
+}
+
 .about {
   display: flex;
   flex-basis: calc((100% - 120px) / 4);
@@ -310,9 +321,11 @@ img {
 
 .social {
   display: flex;
-  width: 206px;
-  margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.social-item + .social-item {
+  margin-left: 10px;
 }
 
 .social-icon {
@@ -346,10 +359,12 @@ img {
 }
 
 .companies-item {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
@@ -359,8 +374,13 @@ img {
   fill: #afb1b8;
 }
 
-.companies-icon:hover,
-.companies-icon:focus {
+.companies-item:hover,
+.companies-item:focus {
+  border: 1px solid var(--brand-color);
+}
+
+.companies-item:hover .companies-icon,
+.companies-item:focus .companies-icon {
   fill: var(--brand-color);
 }
 
@@ -374,6 +394,7 @@ img {
 
 .footer-position {
   display: flex;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -388,9 +409,11 @@ img {
   letter-spacing: 0.03em;
 }
 
+.social-footer {
+  margin-left: 70px;
+}
+
 .address-link {
-  margin-right: 70px;
-  width: 231px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -414,10 +437,6 @@ img {
 .footer-link-address:focus,
 .footer-link-contact:focus {
   color: var(--brand-color);
-}
-
-.social-footer {
-  margin-top: 12px;
 }
 
 .join {
